@@ -52,89 +52,53 @@
 /******/ 	function promiseResolve() { return Promise.resolve(); }
 /******/
 /******/ 	var wasmImportObjects = {
-/******/ 		"../pkg/comets_bg.wasm": function() {
+/******/ 		"../pkg/tictactoe_bg.wasm": function() {
 /******/ 			return {
-/******/ 				"./comets_bg.js": {
+/******/ 				"./tictactoe_bg.js": {
+/******/ 					"__wbg_log_13f455ad6a3b32d9": function(p0i32,p1i32) {
+/******/ 						return installedModules["../pkg/tictactoe_bg.js"].exports["__wbg_log_13f455ad6a3b32d9"](p0i32,p1i32);
+/******/ 					},
 /******/ 					"__wbindgen_object_drop_ref": function(p0i32) {
-/******/ 						return installedModules["../pkg/comets_bg.js"].exports["__wbindgen_object_drop_ref"](p0i32);
+/******/ 						return installedModules["../pkg/tictactoe_bg.js"].exports["__wbindgen_object_drop_ref"](p0i32);
 /******/ 					},
-/******/ 					"__wbg_getRandomValues_98117e9a7e993920": function(p0i32,p1i32) {
-/******/ 						return installedModules["../pkg/comets_bg.js"].exports["__wbg_getRandomValues_98117e9a7e993920"](p0i32,p1i32);
+/******/ 					"__wbindgen_string_new": function(p0i32,p1i32) {
+/******/ 						return installedModules["../pkg/tictactoe_bg.js"].exports["__wbindgen_string_new"](p0i32,p1i32);
 /******/ 					},
-/******/ 					"__wbg_randomFillSync_64cc7d048f228ca8": function(p0i32,p1i32,p2i32) {
-/******/ 						return installedModules["../pkg/comets_bg.js"].exports["__wbg_randomFillSync_64cc7d048f228ca8"](p0i32,p1i32,p2i32);
-/******/ 					},
-/******/ 					"__wbg_process_2f24d6544ea7b200": function(p0i32) {
-/******/ 						return installedModules["../pkg/comets_bg.js"].exports["__wbg_process_2f24d6544ea7b200"](p0i32);
-/******/ 					},
-/******/ 					"__wbindgen_is_object": function(p0i32) {
-/******/ 						return installedModules["../pkg/comets_bg.js"].exports["__wbindgen_is_object"](p0i32);
-/******/ 					},
-/******/ 					"__wbg_versions_6164651e75405d4a": function(p0i32) {
-/******/ 						return installedModules["../pkg/comets_bg.js"].exports["__wbg_versions_6164651e75405d4a"](p0i32);
-/******/ 					},
-/******/ 					"__wbg_node_4b517d861cbcb3bc": function(p0i32) {
-/******/ 						return installedModules["../pkg/comets_bg.js"].exports["__wbg_node_4b517d861cbcb3bc"](p0i32);
-/******/ 					},
-/******/ 					"__wbindgen_is_string": function(p0i32) {
-/******/ 						return installedModules["../pkg/comets_bg.js"].exports["__wbindgen_is_string"](p0i32);
-/******/ 					},
-/******/ 					"__wbg_modulerequire_3440a4bcf44437db": function(p0i32,p1i32) {
-/******/ 						return installedModules["../pkg/comets_bg.js"].exports["__wbg_modulerequire_3440a4bcf44437db"](p0i32,p1i32);
-/******/ 					},
-/******/ 					"__wbg_crypto_98fc271021c7d2ad": function(p0i32) {
-/******/ 						return installedModules["../pkg/comets_bg.js"].exports["__wbg_crypto_98fc271021c7d2ad"](p0i32);
-/******/ 					},
-/******/ 					"__wbg_msCrypto_a2cdb043d2bfe57f": function(p0i32) {
-/******/ 						return installedModules["../pkg/comets_bg.js"].exports["__wbg_msCrypto_a2cdb043d2bfe57f"](p0i32);
+/******/ 					"__wbg_now_559193109055ebad": function(p0i32) {
+/******/ 						return installedModules["../pkg/tictactoe_bg.js"].exports["__wbg_now_559193109055ebad"](p0i32);
 /******/ 					},
 /******/ 					"__wbg_newnoargs_be86524d73f67598": function(p0i32,p1i32) {
-/******/ 						return installedModules["../pkg/comets_bg.js"].exports["__wbg_newnoargs_be86524d73f67598"](p0i32,p1i32);
+/******/ 						return installedModules["../pkg/tictactoe_bg.js"].exports["__wbg_newnoargs_be86524d73f67598"](p0i32,p1i32);
+/******/ 					},
+/******/ 					"__wbg_get_4d0f21c2f823742e": function(p0i32,p1i32) {
+/******/ 						return installedModules["../pkg/tictactoe_bg.js"].exports["__wbg_get_4d0f21c2f823742e"](p0i32,p1i32);
 /******/ 					},
 /******/ 					"__wbg_call_888d259a5fefc347": function(p0i32,p1i32) {
-/******/ 						return installedModules["../pkg/comets_bg.js"].exports["__wbg_call_888d259a5fefc347"](p0i32,p1i32);
-/******/ 					},
-/******/ 					"__wbg_self_c6fbdfc2918d5e58": function() {
-/******/ 						return installedModules["../pkg/comets_bg.js"].exports["__wbg_self_c6fbdfc2918d5e58"]();
-/******/ 					},
-/******/ 					"__wbg_window_baec038b5ab35c54": function() {
-/******/ 						return installedModules["../pkg/comets_bg.js"].exports["__wbg_window_baec038b5ab35c54"]();
-/******/ 					},
-/******/ 					"__wbg_globalThis_3f735a5746d41fbd": function() {
-/******/ 						return installedModules["../pkg/comets_bg.js"].exports["__wbg_globalThis_3f735a5746d41fbd"]();
-/******/ 					},
-/******/ 					"__wbg_global_1bc0b39582740e95": function() {
-/******/ 						return installedModules["../pkg/comets_bg.js"].exports["__wbg_global_1bc0b39582740e95"]();
-/******/ 					},
-/******/ 					"__wbindgen_is_undefined": function(p0i32) {
-/******/ 						return installedModules["../pkg/comets_bg.js"].exports["__wbindgen_is_undefined"](p0i32);
-/******/ 					},
-/******/ 					"__wbg_buffer_397eaa4d72ee94dd": function(p0i32) {
-/******/ 						return installedModules["../pkg/comets_bg.js"].exports["__wbg_buffer_397eaa4d72ee94dd"](p0i32);
-/******/ 					},
-/******/ 					"__wbg_new_a7ce447f15ff496f": function(p0i32) {
-/******/ 						return installedModules["../pkg/comets_bg.js"].exports["__wbg_new_a7ce447f15ff496f"](p0i32);
-/******/ 					},
-/******/ 					"__wbg_set_969ad0a60e51d320": function(p0i32,p1i32,p2i32) {
-/******/ 						return installedModules["../pkg/comets_bg.js"].exports["__wbg_set_969ad0a60e51d320"](p0i32,p1i32,p2i32);
-/******/ 					},
-/******/ 					"__wbg_length_1eb8fc608a0d4cdb": function(p0i32) {
-/******/ 						return installedModules["../pkg/comets_bg.js"].exports["__wbg_length_1eb8fc608a0d4cdb"](p0i32);
-/******/ 					},
-/******/ 					"__wbg_newwithlength_929232475839a482": function(p0i32) {
-/******/ 						return installedModules["../pkg/comets_bg.js"].exports["__wbg_newwithlength_929232475839a482"](p0i32);
-/******/ 					},
-/******/ 					"__wbg_subarray_8b658422a224f479": function(p0i32,p1i32,p2i32) {
-/******/ 						return installedModules["../pkg/comets_bg.js"].exports["__wbg_subarray_8b658422a224f479"](p0i32,p1i32,p2i32);
+/******/ 						return installedModules["../pkg/tictactoe_bg.js"].exports["__wbg_call_888d259a5fefc347"](p0i32,p1i32);
 /******/ 					},
 /******/ 					"__wbindgen_object_clone_ref": function(p0i32) {
-/******/ 						return installedModules["../pkg/comets_bg.js"].exports["__wbindgen_object_clone_ref"](p0i32);
+/******/ 						return installedModules["../pkg/tictactoe_bg.js"].exports["__wbindgen_object_clone_ref"](p0i32);
+/******/ 					},
+/******/ 					"__wbg_self_c6fbdfc2918d5e58": function() {
+/******/ 						return installedModules["../pkg/tictactoe_bg.js"].exports["__wbg_self_c6fbdfc2918d5e58"]();
+/******/ 					},
+/******/ 					"__wbg_window_baec038b5ab35c54": function() {
+/******/ 						return installedModules["../pkg/tictactoe_bg.js"].exports["__wbg_window_baec038b5ab35c54"]();
+/******/ 					},
+/******/ 					"__wbg_globalThis_3f735a5746d41fbd": function() {
+/******/ 						return installedModules["../pkg/tictactoe_bg.js"].exports["__wbg_globalThis_3f735a5746d41fbd"]();
+/******/ 					},
+/******/ 					"__wbg_global_1bc0b39582740e95": function() {
+/******/ 						return installedModules["../pkg/tictactoe_bg.js"].exports["__wbg_global_1bc0b39582740e95"]();
+/******/ 					},
+/******/ 					"__wbindgen_is_undefined": function(p0i32) {
+/******/ 						return installedModules["../pkg/tictactoe_bg.js"].exports["__wbindgen_is_undefined"](p0i32);
+/******/ 					},
+/******/ 					"__wbindgen_debug_string": function(p0i32,p1i32) {
+/******/ 						return installedModules["../pkg/tictactoe_bg.js"].exports["__wbindgen_debug_string"](p0i32,p1i32);
 /******/ 					},
 /******/ 					"__wbindgen_throw": function(p0i32,p1i32) {
-/******/ 						return installedModules["../pkg/comets_bg.js"].exports["__wbindgen_throw"](p0i32,p1i32);
-/******/ 					},
-/******/ 					"__wbindgen_memory": function() {
-/******/ 						return installedModules["../pkg/comets_bg.js"].exports["__wbindgen_memory"]();
+/******/ 						return installedModules["../pkg/tictactoe_bg.js"].exports["__wbindgen_throw"](p0i32,p1i32);
 /******/ 					}
 /******/ 				}
 /******/ 			};
@@ -227,7 +191,7 @@
 /******/
 /******/ 		// Fetch + compile chunk loading for webassembly
 /******/
-/******/ 		var wasmModules = {"0":["../pkg/comets_bg.wasm"]}[chunkId] || [];
+/******/ 		var wasmModules = {"1":["../pkg/tictactoe_bg.wasm"]}[chunkId] || [];
 /******/
 /******/ 		wasmModules.forEach(function(wasmModuleId) {
 /******/ 			var installedWasmModuleData = installedWasmModules[wasmModuleId];
@@ -237,7 +201,7 @@
 /******/ 				promises.push(installedWasmModuleData);
 /******/ 			else {
 /******/ 				var importObject = wasmImportObjects[wasmModuleId]();
-/******/ 				var req = fetch(__webpack_require__.p + "" + {"../pkg/comets_bg.wasm":"324a3f1cb785f5b56a1b"}[wasmModuleId] + ".module.wasm");
+/******/ 				var req = fetch(__webpack_require__.p + "" + {"../pkg/tictactoe_bg.wasm":"4b58de54fb19d2240792"}[wasmModuleId] + ".module.wasm");
 /******/ 				var promise;
 /******/ 				if(importObject instanceof Promise && typeof WebAssembly.compileStreaming === 'function') {
 /******/ 					promise = Promise.all([WebAssembly.compileStreaming(req), importObject]).then(function(items) {
@@ -338,7 +302,7 @@
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("// A dependency graph that contains any wasm must all be imported\n// asynchronously. This `bootstrap.js` file does the single async import, so\n// that no one else needs to worry about it again.\n__webpack_require__.e(/*! import() */ 0).then(__webpack_require__.bind(null, /*! ./index.js */ \"./index.js\"))\n  .catch(e => console.error(\"Error importing `index.js`:\", e));\n\n\n//# sourceURL=webpack:///./bootstrap.js?");
+eval("// A dependency graph that contains any wasm must all be imported\n// asynchronously. This `bootstrap.js` file does the single async import, so\n// that no one else needs to worry about it again.\nPromise.all(/*! import() */[__webpack_require__.e(0), __webpack_require__.e(1)]).then(__webpack_require__.t.bind(null, /*! ./src/index.js */ \"./src/index.js\", 7))\n  .catch(e => console.error(\"Error importing `index.js`:\", e));\n\n\n//# sourceURL=webpack:///./bootstrap.js?");
 
 /***/ })
 
