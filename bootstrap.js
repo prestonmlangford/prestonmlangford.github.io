@@ -52,53 +52,206 @@
 /******/ 	function promiseResolve() { return Promise.resolve(); }
 /******/
 /******/ 	var wasmImportObjects = {
-/******/ 		"../pkg/tictactoe_bg.wasm": function() {
+/******/ 		"../connect4/pkg/connect4_bg.wasm": function() {
+/******/ 			return {
+/******/ 				"./connect4_bg.js": {
+/******/ 					"__wbg_log_0bac063cd365cc70": function(p0i32,p1i32) {
+/******/ 						return installedModules["../connect4/pkg/connect4_bg.js"].exports["__wbg_log_0bac063cd365cc70"](p0i32,p1i32);
+/******/ 					},
+/******/ 					"__wbindgen_object_drop_ref": function(p0i32) {
+/******/ 						return installedModules["../connect4/pkg/connect4_bg.js"].exports["__wbindgen_object_drop_ref"](p0i32);
+/******/ 					},
+/******/ 					"__wbindgen_string_new": function(p0i32,p1i32) {
+/******/ 						return installedModules["../connect4/pkg/connect4_bg.js"].exports["__wbindgen_string_new"](p0i32,p1i32);
+/******/ 					},
+/******/ 					"__wbg_now_559193109055ebad": function(p0i32) {
+/******/ 						return installedModules["../connect4/pkg/connect4_bg.js"].exports["__wbg_now_559193109055ebad"](p0i32);
+/******/ 					},
+/******/ 					"__wbg_newnoargs_be86524d73f67598": function(p0i32,p1i32) {
+/******/ 						return installedModules["../connect4/pkg/connect4_bg.js"].exports["__wbg_newnoargs_be86524d73f67598"](p0i32,p1i32);
+/******/ 					},
+/******/ 					"__wbg_get_4d0f21c2f823742e": function(p0i32,p1i32) {
+/******/ 						return installedModules["../connect4/pkg/connect4_bg.js"].exports["__wbg_get_4d0f21c2f823742e"](p0i32,p1i32);
+/******/ 					},
+/******/ 					"__wbg_call_888d259a5fefc347": function(p0i32,p1i32) {
+/******/ 						return installedModules["../connect4/pkg/connect4_bg.js"].exports["__wbg_call_888d259a5fefc347"](p0i32,p1i32);
+/******/ 					},
+/******/ 					"__wbindgen_object_clone_ref": function(p0i32) {
+/******/ 						return installedModules["../connect4/pkg/connect4_bg.js"].exports["__wbindgen_object_clone_ref"](p0i32);
+/******/ 					},
+/******/ 					"__wbg_self_c6fbdfc2918d5e58": function() {
+/******/ 						return installedModules["../connect4/pkg/connect4_bg.js"].exports["__wbg_self_c6fbdfc2918d5e58"]();
+/******/ 					},
+/******/ 					"__wbg_window_baec038b5ab35c54": function() {
+/******/ 						return installedModules["../connect4/pkg/connect4_bg.js"].exports["__wbg_window_baec038b5ab35c54"]();
+/******/ 					},
+/******/ 					"__wbg_globalThis_3f735a5746d41fbd": function() {
+/******/ 						return installedModules["../connect4/pkg/connect4_bg.js"].exports["__wbg_globalThis_3f735a5746d41fbd"]();
+/******/ 					},
+/******/ 					"__wbg_global_1bc0b39582740e95": function() {
+/******/ 						return installedModules["../connect4/pkg/connect4_bg.js"].exports["__wbg_global_1bc0b39582740e95"]();
+/******/ 					},
+/******/ 					"__wbindgen_is_undefined": function(p0i32) {
+/******/ 						return installedModules["../connect4/pkg/connect4_bg.js"].exports["__wbindgen_is_undefined"](p0i32);
+/******/ 					},
+/******/ 					"__wbindgen_debug_string": function(p0i32,p1i32) {
+/******/ 						return installedModules["../connect4/pkg/connect4_bg.js"].exports["__wbindgen_debug_string"](p0i32,p1i32);
+/******/ 					},
+/******/ 					"__wbindgen_throw": function(p0i32,p1i32) {
+/******/ 						return installedModules["../connect4/pkg/connect4_bg.js"].exports["__wbindgen_throw"](p0i32,p1i32);
+/******/ 					}
+/******/ 				}
+/******/ 			};
+/******/ 		},
+/******/ 		"../mancala/pkg/mancala_bg.wasm": function() {
+/******/ 			return {
+/******/ 				"./mancala_bg.js": {
+/******/ 					"__wbg_log_1d259f75208cfc25": function(p0i32,p1i32) {
+/******/ 						return installedModules["../mancala/pkg/mancala_bg.js"].exports["__wbg_log_1d259f75208cfc25"](p0i32,p1i32);
+/******/ 					},
+/******/ 					"__wbindgen_object_drop_ref": function(p0i32) {
+/******/ 						return installedModules["../mancala/pkg/mancala_bg.js"].exports["__wbindgen_object_drop_ref"](p0i32);
+/******/ 					},
+/******/ 					"__wbindgen_string_new": function(p0i32,p1i32) {
+/******/ 						return installedModules["../mancala/pkg/mancala_bg.js"].exports["__wbindgen_string_new"](p0i32,p1i32);
+/******/ 					},
+/******/ 					"__wbg_now_559193109055ebad": function(p0i32) {
+/******/ 						return installedModules["../mancala/pkg/mancala_bg.js"].exports["__wbg_now_559193109055ebad"](p0i32);
+/******/ 					},
+/******/ 					"__wbg_newnoargs_be86524d73f67598": function(p0i32,p1i32) {
+/******/ 						return installedModules["../mancala/pkg/mancala_bg.js"].exports["__wbg_newnoargs_be86524d73f67598"](p0i32,p1i32);
+/******/ 					},
+/******/ 					"__wbg_get_4d0f21c2f823742e": function(p0i32,p1i32) {
+/******/ 						return installedModules["../mancala/pkg/mancala_bg.js"].exports["__wbg_get_4d0f21c2f823742e"](p0i32,p1i32);
+/******/ 					},
+/******/ 					"__wbg_call_888d259a5fefc347": function(p0i32,p1i32) {
+/******/ 						return installedModules["../mancala/pkg/mancala_bg.js"].exports["__wbg_call_888d259a5fefc347"](p0i32,p1i32);
+/******/ 					},
+/******/ 					"__wbindgen_object_clone_ref": function(p0i32) {
+/******/ 						return installedModules["../mancala/pkg/mancala_bg.js"].exports["__wbindgen_object_clone_ref"](p0i32);
+/******/ 					},
+/******/ 					"__wbg_self_c6fbdfc2918d5e58": function() {
+/******/ 						return installedModules["../mancala/pkg/mancala_bg.js"].exports["__wbg_self_c6fbdfc2918d5e58"]();
+/******/ 					},
+/******/ 					"__wbg_window_baec038b5ab35c54": function() {
+/******/ 						return installedModules["../mancala/pkg/mancala_bg.js"].exports["__wbg_window_baec038b5ab35c54"]();
+/******/ 					},
+/******/ 					"__wbg_globalThis_3f735a5746d41fbd": function() {
+/******/ 						return installedModules["../mancala/pkg/mancala_bg.js"].exports["__wbg_globalThis_3f735a5746d41fbd"]();
+/******/ 					},
+/******/ 					"__wbg_global_1bc0b39582740e95": function() {
+/******/ 						return installedModules["../mancala/pkg/mancala_bg.js"].exports["__wbg_global_1bc0b39582740e95"]();
+/******/ 					},
+/******/ 					"__wbindgen_is_undefined": function(p0i32) {
+/******/ 						return installedModules["../mancala/pkg/mancala_bg.js"].exports["__wbindgen_is_undefined"](p0i32);
+/******/ 					},
+/******/ 					"__wbindgen_debug_string": function(p0i32,p1i32) {
+/******/ 						return installedModules["../mancala/pkg/mancala_bg.js"].exports["__wbindgen_debug_string"](p0i32,p1i32);
+/******/ 					},
+/******/ 					"__wbindgen_throw": function(p0i32,p1i32) {
+/******/ 						return installedModules["../mancala/pkg/mancala_bg.js"].exports["__wbindgen_throw"](p0i32,p1i32);
+/******/ 					}
+/******/ 				}
+/******/ 			};
+/******/ 		},
+/******/ 		"../reversi/pkg/reversi_bg.wasm": function() {
+/******/ 			return {
+/******/ 				"./reversi_bg.js": {
+/******/ 					"__wbg_log_3aeede96ca668520": function(p0i32,p1i32) {
+/******/ 						return installedModules["../reversi/pkg/reversi_bg.js"].exports["__wbg_log_3aeede96ca668520"](p0i32,p1i32);
+/******/ 					},
+/******/ 					"__wbindgen_object_drop_ref": function(p0i32) {
+/******/ 						return installedModules["../reversi/pkg/reversi_bg.js"].exports["__wbindgen_object_drop_ref"](p0i32);
+/******/ 					},
+/******/ 					"__wbindgen_string_new": function(p0i32,p1i32) {
+/******/ 						return installedModules["../reversi/pkg/reversi_bg.js"].exports["__wbindgen_string_new"](p0i32,p1i32);
+/******/ 					},
+/******/ 					"__wbg_now_559193109055ebad": function(p0i32) {
+/******/ 						return installedModules["../reversi/pkg/reversi_bg.js"].exports["__wbg_now_559193109055ebad"](p0i32);
+/******/ 					},
+/******/ 					"__wbg_newnoargs_be86524d73f67598": function(p0i32,p1i32) {
+/******/ 						return installedModules["../reversi/pkg/reversi_bg.js"].exports["__wbg_newnoargs_be86524d73f67598"](p0i32,p1i32);
+/******/ 					},
+/******/ 					"__wbg_get_4d0f21c2f823742e": function(p0i32,p1i32) {
+/******/ 						return installedModules["../reversi/pkg/reversi_bg.js"].exports["__wbg_get_4d0f21c2f823742e"](p0i32,p1i32);
+/******/ 					},
+/******/ 					"__wbg_call_888d259a5fefc347": function(p0i32,p1i32) {
+/******/ 						return installedModules["../reversi/pkg/reversi_bg.js"].exports["__wbg_call_888d259a5fefc347"](p0i32,p1i32);
+/******/ 					},
+/******/ 					"__wbindgen_object_clone_ref": function(p0i32) {
+/******/ 						return installedModules["../reversi/pkg/reversi_bg.js"].exports["__wbindgen_object_clone_ref"](p0i32);
+/******/ 					},
+/******/ 					"__wbg_self_c6fbdfc2918d5e58": function() {
+/******/ 						return installedModules["../reversi/pkg/reversi_bg.js"].exports["__wbg_self_c6fbdfc2918d5e58"]();
+/******/ 					},
+/******/ 					"__wbg_window_baec038b5ab35c54": function() {
+/******/ 						return installedModules["../reversi/pkg/reversi_bg.js"].exports["__wbg_window_baec038b5ab35c54"]();
+/******/ 					},
+/******/ 					"__wbg_globalThis_3f735a5746d41fbd": function() {
+/******/ 						return installedModules["../reversi/pkg/reversi_bg.js"].exports["__wbg_globalThis_3f735a5746d41fbd"]();
+/******/ 					},
+/******/ 					"__wbg_global_1bc0b39582740e95": function() {
+/******/ 						return installedModules["../reversi/pkg/reversi_bg.js"].exports["__wbg_global_1bc0b39582740e95"]();
+/******/ 					},
+/******/ 					"__wbindgen_is_undefined": function(p0i32) {
+/******/ 						return installedModules["../reversi/pkg/reversi_bg.js"].exports["__wbindgen_is_undefined"](p0i32);
+/******/ 					},
+/******/ 					"__wbindgen_debug_string": function(p0i32,p1i32) {
+/******/ 						return installedModules["../reversi/pkg/reversi_bg.js"].exports["__wbindgen_debug_string"](p0i32,p1i32);
+/******/ 					},
+/******/ 					"__wbindgen_throw": function(p0i32,p1i32) {
+/******/ 						return installedModules["../reversi/pkg/reversi_bg.js"].exports["__wbindgen_throw"](p0i32,p1i32);
+/******/ 					}
+/******/ 				}
+/******/ 			};
+/******/ 		},
+/******/ 		"../tictactoe/pkg/tictactoe_bg.wasm": function() {
 /******/ 			return {
 /******/ 				"./tictactoe_bg.js": {
 /******/ 					"__wbg_log_13f455ad6a3b32d9": function(p0i32,p1i32) {
-/******/ 						return installedModules["../pkg/tictactoe_bg.js"].exports["__wbg_log_13f455ad6a3b32d9"](p0i32,p1i32);
+/******/ 						return installedModules["../tictactoe/pkg/tictactoe_bg.js"].exports["__wbg_log_13f455ad6a3b32d9"](p0i32,p1i32);
 /******/ 					},
 /******/ 					"__wbindgen_object_drop_ref": function(p0i32) {
-/******/ 						return installedModules["../pkg/tictactoe_bg.js"].exports["__wbindgen_object_drop_ref"](p0i32);
+/******/ 						return installedModules["../tictactoe/pkg/tictactoe_bg.js"].exports["__wbindgen_object_drop_ref"](p0i32);
 /******/ 					},
 /******/ 					"__wbindgen_string_new": function(p0i32,p1i32) {
-/******/ 						return installedModules["../pkg/tictactoe_bg.js"].exports["__wbindgen_string_new"](p0i32,p1i32);
+/******/ 						return installedModules["../tictactoe/pkg/tictactoe_bg.js"].exports["__wbindgen_string_new"](p0i32,p1i32);
 /******/ 					},
 /******/ 					"__wbg_now_559193109055ebad": function(p0i32) {
-/******/ 						return installedModules["../pkg/tictactoe_bg.js"].exports["__wbg_now_559193109055ebad"](p0i32);
+/******/ 						return installedModules["../tictactoe/pkg/tictactoe_bg.js"].exports["__wbg_now_559193109055ebad"](p0i32);
 /******/ 					},
 /******/ 					"__wbg_newnoargs_be86524d73f67598": function(p0i32,p1i32) {
-/******/ 						return installedModules["../pkg/tictactoe_bg.js"].exports["__wbg_newnoargs_be86524d73f67598"](p0i32,p1i32);
+/******/ 						return installedModules["../tictactoe/pkg/tictactoe_bg.js"].exports["__wbg_newnoargs_be86524d73f67598"](p0i32,p1i32);
 /******/ 					},
 /******/ 					"__wbg_get_4d0f21c2f823742e": function(p0i32,p1i32) {
-/******/ 						return installedModules["../pkg/tictactoe_bg.js"].exports["__wbg_get_4d0f21c2f823742e"](p0i32,p1i32);
+/******/ 						return installedModules["../tictactoe/pkg/tictactoe_bg.js"].exports["__wbg_get_4d0f21c2f823742e"](p0i32,p1i32);
 /******/ 					},
 /******/ 					"__wbg_call_888d259a5fefc347": function(p0i32,p1i32) {
-/******/ 						return installedModules["../pkg/tictactoe_bg.js"].exports["__wbg_call_888d259a5fefc347"](p0i32,p1i32);
+/******/ 						return installedModules["../tictactoe/pkg/tictactoe_bg.js"].exports["__wbg_call_888d259a5fefc347"](p0i32,p1i32);
 /******/ 					},
 /******/ 					"__wbindgen_object_clone_ref": function(p0i32) {
-/******/ 						return installedModules["../pkg/tictactoe_bg.js"].exports["__wbindgen_object_clone_ref"](p0i32);
+/******/ 						return installedModules["../tictactoe/pkg/tictactoe_bg.js"].exports["__wbindgen_object_clone_ref"](p0i32);
 /******/ 					},
 /******/ 					"__wbg_self_c6fbdfc2918d5e58": function() {
-/******/ 						return installedModules["../pkg/tictactoe_bg.js"].exports["__wbg_self_c6fbdfc2918d5e58"]();
+/******/ 						return installedModules["../tictactoe/pkg/tictactoe_bg.js"].exports["__wbg_self_c6fbdfc2918d5e58"]();
 /******/ 					},
 /******/ 					"__wbg_window_baec038b5ab35c54": function() {
-/******/ 						return installedModules["../pkg/tictactoe_bg.js"].exports["__wbg_window_baec038b5ab35c54"]();
+/******/ 						return installedModules["../tictactoe/pkg/tictactoe_bg.js"].exports["__wbg_window_baec038b5ab35c54"]();
 /******/ 					},
 /******/ 					"__wbg_globalThis_3f735a5746d41fbd": function() {
-/******/ 						return installedModules["../pkg/tictactoe_bg.js"].exports["__wbg_globalThis_3f735a5746d41fbd"]();
+/******/ 						return installedModules["../tictactoe/pkg/tictactoe_bg.js"].exports["__wbg_globalThis_3f735a5746d41fbd"]();
 /******/ 					},
 /******/ 					"__wbg_global_1bc0b39582740e95": function() {
-/******/ 						return installedModules["../pkg/tictactoe_bg.js"].exports["__wbg_global_1bc0b39582740e95"]();
+/******/ 						return installedModules["../tictactoe/pkg/tictactoe_bg.js"].exports["__wbg_global_1bc0b39582740e95"]();
 /******/ 					},
 /******/ 					"__wbindgen_is_undefined": function(p0i32) {
-/******/ 						return installedModules["../pkg/tictactoe_bg.js"].exports["__wbindgen_is_undefined"](p0i32);
+/******/ 						return installedModules["../tictactoe/pkg/tictactoe_bg.js"].exports["__wbindgen_is_undefined"](p0i32);
 /******/ 					},
 /******/ 					"__wbindgen_debug_string": function(p0i32,p1i32) {
-/******/ 						return installedModules["../pkg/tictactoe_bg.js"].exports["__wbindgen_debug_string"](p0i32,p1i32);
+/******/ 						return installedModules["../tictactoe/pkg/tictactoe_bg.js"].exports["__wbindgen_debug_string"](p0i32,p1i32);
 /******/ 					},
 /******/ 					"__wbindgen_throw": function(p0i32,p1i32) {
-/******/ 						return installedModules["../pkg/tictactoe_bg.js"].exports["__wbindgen_throw"](p0i32,p1i32);
+/******/ 						return installedModules["../tictactoe/pkg/tictactoe_bg.js"].exports["__wbindgen_throw"](p0i32,p1i32);
 /******/ 					}
 /******/ 				}
 /******/ 			};
@@ -191,7 +344,7 @@
 /******/
 /******/ 		// Fetch + compile chunk loading for webassembly
 /******/
-/******/ 		var wasmModules = {"1":["../pkg/tictactoe_bg.wasm"]}[chunkId] || [];
+/******/ 		var wasmModules = {"0":["../connect4/pkg/connect4_bg.wasm","../mancala/pkg/mancala_bg.wasm","../reversi/pkg/reversi_bg.wasm","../tictactoe/pkg/tictactoe_bg.wasm"]}[chunkId] || [];
 /******/
 /******/ 		wasmModules.forEach(function(wasmModuleId) {
 /******/ 			var installedWasmModuleData = installedWasmModules[wasmModuleId];
@@ -201,7 +354,7 @@
 /******/ 				promises.push(installedWasmModuleData);
 /******/ 			else {
 /******/ 				var importObject = wasmImportObjects[wasmModuleId]();
-/******/ 				var req = fetch(__webpack_require__.p + "" + {"../pkg/tictactoe_bg.wasm":"ab8bd0619c978fe8455d"}[wasmModuleId] + ".module.wasm");
+/******/ 				var req = fetch(__webpack_require__.p + "" + {"../connect4/pkg/connect4_bg.wasm":"55cf9867566567cf1348","../mancala/pkg/mancala_bg.wasm":"a4666c32e2b3c1acfbbb","../reversi/pkg/reversi_bg.wasm":"a19904a1d729f4d91ef3","../tictactoe/pkg/tictactoe_bg.wasm":"7d7bc01001b0995cb3a2"}[wasmModuleId] + ".module.wasm");
 /******/ 				var promise;
 /******/ 				if(importObject instanceof Promise && typeof WebAssembly.compileStreaming === 'function') {
 /******/ 					promise = Promise.all([WebAssembly.compileStreaming(req), importObject]).then(function(items) {
@@ -302,7 +455,7 @@
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("// A dependency graph that contains any wasm must all be imported\n// asynchronously. This `bootstrap.js` file does the single async import, so\n// that no one else needs to worry about it again.\nPromise.all(/*! import() */[__webpack_require__.e(0), __webpack_require__.e(1)]).then(__webpack_require__.t.bind(null, /*! ./src/index.js */ \"./src/index.js\", 7))\n  .catch(e => console.error(\"Error importing `index.js`:\", e));\n\n\n//# sourceURL=webpack:///./bootstrap.js?");
+eval("// A dependency graph that contains any wasm must all be imported\n// asynchronously. This `bootstrap.js` file does the single async import, so\n// that no one else needs to worry about it again.\nPromise.all(/*! import() */[__webpack_require__.e(1), __webpack_require__.e(0)]).then(__webpack_require__.t.bind(null, /*! ./src/index.js */ \"./src/index.js\", 7))\n  .catch(e => console.error(\"Error importing `index.js`:\", e));\n\n\n//# sourceURL=webpack:///./bootstrap.js?");
 
 /***/ })
 
