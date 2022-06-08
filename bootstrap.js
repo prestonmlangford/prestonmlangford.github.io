@@ -157,9 +157,6 @@
 /******/ 		"../reversi/pkg/reversi_bg.wasm": function() {
 /******/ 			return {
 /******/ 				"./reversi_bg.js": {
-/******/ 					"__wbg_log_3aeede96ca668520": function(p0i32,p1i32) {
-/******/ 						return installedModules["../reversi/pkg/reversi_bg.js"].exports["__wbg_log_3aeede96ca668520"](p0i32,p1i32);
-/******/ 					},
 /******/ 					"__wbindgen_object_drop_ref": function(p0i32) {
 /******/ 						return installedModules["../reversi/pkg/reversi_bg.js"].exports["__wbindgen_object_drop_ref"](p0i32);
 /******/ 					},
@@ -354,7 +351,7 @@
 /******/ 				promises.push(installedWasmModuleData);
 /******/ 			else {
 /******/ 				var importObject = wasmImportObjects[wasmModuleId]();
-/******/ 				var req = fetch(__webpack_require__.p + "" + {"../connect4/pkg/connect4_bg.wasm":"55cf9867566567cf1348","../mancala/pkg/mancala_bg.wasm":"8c80be581e7a0f7d7a42","../reversi/pkg/reversi_bg.wasm":"a19904a1d729f4d91ef3","../tictactoe/pkg/tictactoe_bg.wasm":"2bfb3d48ab7020a1845f"}[wasmModuleId] + ".module.wasm");
+/******/ 				var req = fetch(__webpack_require__.p + "" + {"../connect4/pkg/connect4_bg.wasm":"f06a8e6480fdce726da4","../mancala/pkg/mancala_bg.wasm":"8c80be581e7a0f7d7a42","../reversi/pkg/reversi_bg.wasm":"9021b657d46c44b49d2b","../tictactoe/pkg/tictactoe_bg.wasm":"2bfb3d48ab7020a1845f"}[wasmModuleId] + ".module.wasm");
 /******/ 				var promise;
 /******/ 				if(importObject instanceof Promise && typeof WebAssembly.compileStreaming === 'function') {
 /******/ 					promise = Promise.all([WebAssembly.compileStreaming(req), importObject]).then(function(items) {
